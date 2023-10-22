@@ -1,0 +1,38 @@
+/* footer for phones*/
+@media screen and (max-width: 767px) {
+    #sidebar{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0%;
+        left: 0%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+    }
+    #Profile_Icon{
+        width: 50%;
+    }
+}
+
+/* footer for PCs*/
+@media screen and (min-width: 768px) {
+    #sidebar{
+        position: fixed;
+        width: 30%;
+        height: 100%;
+        top: 0%;
+        left: 0%;
+        display: flex;
+        flex-direction: column;
+        /*justify-content: center;*/
+        align-items: center;
+        padding: 5px;
+    }
+    #Profile_Icon{
+        padding-top: 25%;
+        width: 50%;
+    }
+}
