@@ -37,4 +37,17 @@
         padding-top: 25%;
         width: 50%;
     }
+    #Btn_ShowSidebar, #Btn_HideSidebar{
+        position: absolute;
+        width: 10%;
+        height: 7%;
+        border-radius: 4%;
+    }
+    #Btn_ShowSidebar{
+        left: 0%;
+        display: none;
+    }
+    #Btn_HideSidebar{
+        right: 0%;
+    }
 }
