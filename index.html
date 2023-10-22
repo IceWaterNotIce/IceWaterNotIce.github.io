@@ -19,7 +19,22 @@
         <title>Home</title>
     </head>
     <body>
-        <div id="sidebar">
+        <button id="Btn_ShowSidebar"><</button>
+        <script>
+            document.getElementById("Btn_ShowSidebar").addEventListener("click", function() {
+                document.getElementById("Sidebar").style.display = "block";
+                document.getElementById("Btn_ShowSidebar").style.display = "none";
+
+            });
+        </script>
+        <div id="Sidebar">
+            <button id="Btn_HideSidebar"><</button>
+            <script>
+                document.getElementById("Btn_HideSidebar").addEventListener("click", function() {
+                    document.getElementById("Sidebar").style.display = "none";
+                    document.getElementById("Btn_ShowSidebar").style.display = "block";
+                });
+            </script>
             <img id="Profile_Icon" src="/Static/Icon.png" alt="Profile_Icon">
             <h1>IceWaterNotIce</h1>
             <a href="/Myprofile/">Profile</a>
