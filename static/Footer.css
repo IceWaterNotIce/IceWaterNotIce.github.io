@@ -1,6 +1,6 @@
 /* footer for phones*/
 @media screen and (max-width: 767px) {
-    #footer{
+    #Footer{
         position: fixed;
         width: 100%;
         height: 70px;
@@ -18,7 +18,7 @@
 
 /* footer for PCs*/
 @media screen and (min-width: 768px) {
-    #footer{
+    #Footer{
         position: fixed;
         width: 100%;
         height: 70px;
