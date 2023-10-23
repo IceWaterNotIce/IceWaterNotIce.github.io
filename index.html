@@ -1,57 +1,60 @@
 <!DOCTYPE html>
 <html lang="zh">
-    <head>
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-RX2NLVYJE8"></script>
-        <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RX2NLVYJE8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-        gtag('config', 'G-RX2NLVYJE8');
-        </script>
-        <meta charset="utf-8"/>
-        <meta name="viewport" content="width=device-width"/>
-        <link rel="icon" type="image/x-icon" href="/Static/Icon.ico"/>
-        <link rel="stylesheet" type="text/css" href="/CSS/Base.css">
-        <link rel="stylesheet" type="text/css" href="/CSS/Sidebar.css">
-        <link rel="stylesheet" type="text/css" href="/CSS/Footer.css">
-        <title>Home</title>
-    </head>
-    <body>
-        <button id="Btn_ShowSidebar">></button>
-        <script>
-            document.getElementById("Btn_ShowSidebar").addEventListener("click", function() {
-                document.getElementById("Sidebar").style.display = "flex";
-                document.getElementById("Btn_ShowSidebar").style.display = "none";
+      gtag('config', 'G-RX2NLVYJE8');
+    </script>
+    
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <link rel="icon" type="image/x-icon" href="/static/Icon.ico"/>
+    <title>Home</title>
+    
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        width: 100vw;
+        background-color: lightgray;
+      }
+    </style>
+    
+<link rel="stylesheet" type="text/css" href="/static/sidebar.css">
+<link rel="stylesheet" type="text/css" href="/static/footer.css">
 
-            });
-        </script>
-        <div id="Sidebar">
-            <button id="Btn_HideSidebar"><</button>
-            <script>
-                document.getElementById("Btn_HideSidebar").addEventListener("click", function() {
-                    document.getElementById("Sidebar").style.display = "none";
-                    document.getElementById("Btn_ShowSidebar").style.display = "block";
-                });
-            </script>
-            <img id="Profile_Icon" src="/Static/Icon.png" alt="Profile_Icon">
-            <h1>IceWaterNotIce</h1>
-            <a href="/Myprofile/">Profile</a>
-        </div>
-        <div id="footer">
-            <a href="https://github.com/IceWaterNotIce">
-                <img class="link-icon" alt="github" src="/Static/GitHub_Icon.png">
-            </a>
-            <a href="https://www.instagram.com/icewaternotice/">
-                <img class="link-icon" alt="instagram" src="/Static/Instagram_Icon.png">
-            </a>
-            <a href="https://space.bilibili.com/3494373465524892">
-                <img class="link-icon" alt="bilibili" src="/Static/Bilibili_Icon.png">
-            </a>
-            <a href="https://www.youtube.com/channel/UCb16KF8A-N37pzXntDkrrUg">
-                <img class="link-icon" alt="youtube" src="/Static/Youtube_Icon.png">
-            </a>
-        </div>
-    </body>
+  </head>
+  <body>
+    
+
+<div id="sidebar">
+    <img id="Profile_Icon" src = "/static/Icon.png">
+    <a href="/Myprofile/">Profile</a>
+</div>
+<a href="/stock/">stock</a>
+<a href="/test/">test</a>
+<a href="/game/">game</a>
+
+<div id="footer">
+    <a href="https://github.com/IceWaterNotIce">
+        <img class="link-icon" src="/static/GitHub_Icon.png">
+    </a>
+    <a href="https://www.instagram.com/icewaternotice/">
+        <img class="link-icon" src="/static/Instagram_Icon.png">
+    </a>
+    <a href="https://space.bilibili.com/3494373465524892">
+        <img class="link-icon" src="/static/Bilibili_Icon.png">
+    </a>
+    <a href="https://www.youtube.com/channel/UCb16KF8A-N37pzXntDkrrUg">
+        <img class="link-icon" src="/static/Youtube_Icon.png">
+    </a>
+</div>
+
+  </body>
 </html>
