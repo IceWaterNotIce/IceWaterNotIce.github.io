@@ -1,0 +1,22 @@
+/* Content for phones*/
+@media screen and (max-width: 767px) {
+    #Content{
+        position: fixed;
+        width: 70%;
+        left: 30%;
+        top: 0%;
+        padding: 5px;
+    }
+}
+
+/* Content for PCs*/
+@media screen and (min-width: 768px) {
+    #Content{
+        position: fixed;
+        width: 70%;
+        left: 31%;
+        top: 0%;
+        padding: 5px;
+        border-left: 1px solid;
+    }
+}
