@@ -1,0 +1,70 @@
+body {
+  background: url("/assets/img/websiteUI/bgWarsprite001.jpg") no-repeat center/cover;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/*分界陰影線*/
+.shadow-dividing-line {
+  position: absolute;
+  left: -10%;
+  width: 120%;
+  height: 300%;
+  box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.5);
+  transform: rotate(10deg);
+  transition: width 2s cubic-bezier(1,0,1,0);
+  transition-delay: 3s;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body:hover .shadow-dividing-line {
+  width: 45%;
+  transition: width 1s cubic-bezier(.03,.89,0,1);
+}
+
+@keyframes slidein {
+  0%   {    
+    right: -8%;
+    opacity: 0;
+  }
+  50%  {    
+    opacity: 0.5;
+  }
+  100% {
+    right: 2%;
+    opacity: 0;
+  }
+}
+
+.shadow-arrow-a, .shadow-arrow-b, .shadow-arrow-c {
+  animation: infinite 3s ease-in slidein;
+  animation-delay: 3.7s;
+  position: absolute;
+  right: -8%;
+  opacity: 0;
+  aspect-ratio : 1 / 1;
+  width: 6%;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 10%,),
+              linear-gradient(90deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 10%,);
+  transform: rotateZ(45deg);
+}
+.shadow-arrow-b {
+  animation-delay: 4.1s;
+}
+.shadow-arrow-c {
+  animation-delay: 4.7s;
+}
+
+body:hover .shadow-arrow-a,
+body:hover .shadow-arrow-b,
+body:hover .shadow-arrow-c {
+  opacity: 0;
+  animation-play-state: paused;
+  animation: none;
+}
