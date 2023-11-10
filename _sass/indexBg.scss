@@ -6,12 +6,11 @@ body {
   justify-content: center;
 }
 
+/*#region 分界陰影線*/
 :root {
   --shadow-dividing-line-out-time: 5s;
   --shadow-dividing-line-in-time: 1s;
 }
-
-/*#region 分界陰影線*/
 .shadow-dividing-line {
   position: absolute;
   left: -10%;
@@ -82,7 +81,6 @@ body:hover .shadow-arrow-c {
 }
 
 /*#endregion*/
-
 /*#region 主頁左上方個人名片*/
 .card-shell {
   position: absolute;
@@ -95,6 +93,7 @@ body:hover .shadow-arrow-c {
   flex-direction: column;
 }
 
+/*#region 名片Icon */
 .card-my-icon {
   position: relative;
   aspect-ratio: 1 / 1;
@@ -125,12 +124,14 @@ body:hover .card-my-icon {
   width: 100%;
 }
 
-.card-content{
+/*#endregion*/
+/*#region 名片內容 */
+.card-content {
   position: relative;
   top: -10%;
   width: 60%;
   height: 0px;
-  background: linear-gradient(rgba(255, 255, 255, 1) 0%,rgba(255, 255, 255, 1) 60%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 60%, rgba(0, 0, 0, 0) 100%);
   padding: 0;
   display: flex;
   flex-direction: column;
@@ -141,13 +142,14 @@ body:hover .card-my-icon {
   transition: height 0.5s linear;
   transition-delay: 1.5s;
 }
+
 .card-content:hover,
-.card-my-icon:hover + .card-content{
+.card-my-icon:hover+.card-content {
   height: 40vh;
   transition: height 0.5s linear;
 }
 
-.card-text{
+.card-text {
   position: relative;
   top: -10%;
   display: flex;
@@ -159,6 +161,7 @@ body:hover .card-my-icon {
   padding: 100% 30% 10% 0%;
   background: linear-gradient(90deg, rgb(99, 5, 149), rgb(224, 130, 223) 100%, );
 }
+
 .card-text h3,
 .card-text h6 {
   transform: rotateZ(15deg);
@@ -169,15 +172,17 @@ body:hover .card-my-icon {
   padding: 0;
   color: #fafafa;
 }
+
 .card-text h3 {
   font-size: 3.5vh;
 }
+
 .card-text h6 {
   margin-top: 15%;
   font-size: 2vh;
 }
 
-.card-btn{
+.card-btn {
   position: relative;
   width: 100%;
   height: 10vh;
@@ -186,9 +191,10 @@ body:hover .card-my-icon {
   justify-content: center;
   flex-direction: column;
 }
+
 @keyframes card-shadow-arrow-animation {
   0% {
-    top:-100%;
+    top: -100%;
     opacity: 0;
   }
 
@@ -201,23 +207,26 @@ body:hover .card-my-icon {
     opacity: 0;
   }
 }
+
 .card-shadow-arrow-a,
-.card-shadow-arrow-b{
+.card-shadow-arrow-b {
   cursor: pointer;
   position: absolute;
   animation: infinite 2.4s ease-in-out card-shadow-arrow-animation;
   opacity: 0;
-  top:-100%;
+  top: -100%;
   height: 80%;
   width: 60%;
   background: linear-gradient(-10deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 10%, ),
     linear-gradient(-80deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 10%, );
   transform: rotateZ(45deg);
 }
-.card-shadow-arrow-b{
+
+.card-shadow-arrow-b {
   animation-delay: 1.2s;
 }
 
+/*#endregion*/
 /*.card-linkout-box{
   position: absolute;
   top: 55%;
