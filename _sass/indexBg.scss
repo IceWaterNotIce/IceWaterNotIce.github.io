@@ -106,16 +106,16 @@ body:hover .shadow-arrow-c {
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.6);
   top: -40%;
   transform: 0;
-  transition: top 0.5s ease-out, transform 0.5s ease-out;
+  z-index: 3;
+  transition: top 1s ease-out, transform 1s ease-out;
   transition-delay: var(--shadow-dividing-line-out-time);
 }
 
 body:hover .card-my-icon {
   top: 0%;
   transform: rotateZ(360deg);
-  z-index: 3;
-  transition: top 0.5s ease-out, transform 0.5s ease-out;
-  transition-delay: var(--shadow-dividing-line-in-time);
+  transition: top 1s ease-out, transform 1s ease-out;
+  transition-delay: calu(var(--shadow-dividing-line-in-time)-0.1s);
 
 }
 
@@ -240,3 +240,5 @@ body:hover .card-my-icon {
 
 
 /*#endregion*/
+
+/*#region 主頁右方主內容*/
