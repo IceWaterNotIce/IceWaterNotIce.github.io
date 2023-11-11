@@ -11,6 +11,7 @@ body {
   --shadow-dividing-line-out-time: 5s;
   --shadow-dividing-line-in-time: 1s;
 }
+
 .shadow-dividing-line {
   position: absolute;
   left: -10%;
@@ -24,6 +25,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 body:hover .shadow-dividing-line {
@@ -241,8 +243,72 @@ body:hover .card-my-icon {
 
 /*#endregion*/
 
+/*#region 主頁左下方導航欄*/
+
+/*#region 導航欄外框*/
+.bottom-navigation {
+  position: absolute;
+  opacity: 0;
+  right: -1.5%;
+  bottom: 0%;
+  width: 71%;
+  height: 2.8%;
+  transform: rotateZ(-10deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 20%, rgba(0, 0, 0, 0.3) 100%),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.4) 100%);
+}
+
+body:hover .bottom-navigation {
+  bottom: 33.8%;
+  opacity: 1;
+  transition: 1s;
+  transition-delay: var(--shadow-dividing-line-in-time);
+}
+
+.bottom-navigation-ul {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.bottom-navigation-ul li {
+  height: 100%;
+  flex-grow: 1;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.6) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 3vh;
+
+}
+
+.bottom-navigation-ul a {
+  color: #fafafa;
+  font-family: bold;
+  text-decoration: none;
+}
+
+
+
+
+/*#endregion*/
+
+/*#endregion*/
+
 /*#region 主頁右方主內容*/
-main{
+main {
   position: absolute;
   right: -10%;
   width: 74%;
@@ -254,19 +320,23 @@ main{
   transform: rotateZ(10deg);
   padding-left: 2px;
   opacity: 0;
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.2) 50%,rgba(0, 0, 0, 0.6) 100%);
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.0) 50%, rgba(0, 0, 0, 0.4) 100%);
   transition: opacity 1s ease-out;
   transition-delay: calc(var(--shadow-dividing-line-out-time) - 2s);
 }
-body:hover main{
+
+body:hover main {
   opacity: 1;
   transition: opacity 1s ease-in-out;
   transition-delay: calc(var(--shadow-dividing-line-in-time) + 0.2s);
 }
-main h1,main p{
+
+main h1,
+main p {
   color: #fafafa;
   margin: 0;
   padding: 0;
   transform: rotateZ(-10deg);
 }
+
 /*#endregion*/

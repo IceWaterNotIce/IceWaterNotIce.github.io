@@ -7,3 +7,6 @@ sass:
   sass_dir: _sass
   style: expanded 
 repository: IceWaterNotIce/IceWaterNotIce.github.io
+
+site.url:
+https://icewaternotice.github.io
