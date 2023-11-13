@@ -8,5 +8,4 @@ sass:
   style: expanded 
 repository: IceWaterNotIce/IceWaterNotIce.github.io
 
-site.url:
-https://icewaternotice.github.io
+site.url: https://icewaternotice.github.io
