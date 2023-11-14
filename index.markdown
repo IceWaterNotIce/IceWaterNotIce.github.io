@@ -5,4 +5,4 @@
 layout: home
 ---
 
-# Weclome to my website &#128075;
+# Welcome to my website &#128075;
