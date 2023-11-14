@@ -7,24 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/css/index.css">
     <link rel="icon" href="/assets/img/websiteUI/myIcon.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
-    <!--分界陰影線-->
-    <div class="shadow-dividing-line">
-        <!--主頁左下方導航欄-->
-        <nav class="bottom-navigation">
-            <ul class="bottom-navigation-ul">
-                <li><a href="{{ site.url }}">主頁</a></li>
-                <li><a href="{{ site.url }}/about.html">關於</a></li>
-                <li><a href="#">博客</a></li>
-            </ul>
-        </nav>
-    </div>
     <!--主頁右側陰影箭咀-->
     <div class="shadow-arrow-a"></div>
     <div class="shadow-arrow-b"></div>
     <div class="shadow-arrow-c"></div>
+
     <!--主頁左上方個人名片-->
     <div class="card-shell">
         <div class="card-my-icon">
@@ -48,9 +39,38 @@
         </div>
     </div>
 
-    <!--主頁右側主內容-->
-    <main>
-    </main>
+    <div class="main-left">
+        <!--主頁左下方導航欄-->
+        <nav class="bottom-navigation">
+            <ul class="bottom-navigation-ul">
+                <li><a href="{{ site.url }}">主頁</a></li>
+                <li><a href="{{ site.url }}/about.html">關於</a></li>
+                <li><a href="{{ site.url }}/bloglist.html">博客</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="main-right">
+        {{ content }}
+    </div>
+
+    <script>
+        let links = document.querySelectorAll('a');
+        let baseUrl = "{{ site.url }}"; // 基礎 URL
+
+        links.forEach((link) => {
+            if (link.href.includes(baseUrl)) { // 檢查 URL 是否包含基礎 URL
+                link.addEventListener('click', function (event) {
+                    event.preventDefault(); // 防止默認的點擊事件
+                    $(".main-right").load(link.href + " div.main-right", function (response, status, xhr) {
+                        if (status == "error") {
+                            $(".main-right").load("{{ site.url }}/404 div.main-right");
+                            
+                        }
+                    });
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

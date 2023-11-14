@@ -9,3 +9,19 @@ sass:
 repository: IceWaterNotIce/IceWaterNotIce.github.io
 
 site.url: https://icewaternotice.github.io
+
+collections:
+  posts:
+    output: true
+    permalink: /:collection/:name/
+    title: :name
+    name: :name
+    layout: home
+  blogs:
+    dir: _blogs
+    output: true
+    permalink: /:collection/:name/
+    title: :name
+    name: :name
+    layout: home
+
