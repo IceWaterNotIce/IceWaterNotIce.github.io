@@ -1,0 +1,42 @@
+body {
+    background: url("/assets/img/websiteUI/bgWarsprite001.jpg") no-repeat center/cover;
+    overflow: hidden;
+}
+
+/*#region 分界陰影線*/
+:root {
+    --main-left-out-time: 5s;
+    --main-left-out-time-delay: 2s;
+    --main-left-in-time: 1s;
+    --main-left-width: 40vw;
+}
+
+.main-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% + 100vh * tan(10deg));
+    width: 40%;
+    clip-path: polygon(0 0, 0 100%, calc(100% - 100vh * tan(10deg)) 100%, 100% 0);
+}
+
+.main-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0%;
+    height: 100%;
+    clip-path: polygon(calc(100vh * tan(10deg)) 0, 0 100%, 100% 100%, 100% 0);
+    opacity: 0;
+    background: linear-gradient(100deg, rgba(0, 0, 0, 0.9) 10%, rgba(0, 0, 0, 0.3) 12.5%, rgba(0, 0, 0, 0.6) 100%);
+    transition: width var(--main-left-in-time) ease-in-out, opacity var(--main-left-in-time) ease-in-out;
+    transition-delay: var(--main-left-out-time-delay);
+    word-break: break-all;
+    overflow: auto;
+}
+
+body:hover .main-right {
+    width: calc(100vw - var(--main-left-width) + 100vh * tan(10deg));
+    opacity: 1;
+    transition: width var(--main-left-in-time) ease-in-out, opacity var(--main-left-in-time) ease-in-out;
+}
