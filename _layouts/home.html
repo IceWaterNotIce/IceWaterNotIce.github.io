@@ -54,22 +54,32 @@
     </div>
 
     <script>
-        let links = document.querySelectorAll('a');
-        let baseUrl = "{{ site.url }}"; // 基礎 URL
+        const baseUrl = "{{ site.url }}"; // 基礎 URL
 
-        links.forEach((link) => {
-            if (link.href.includes(baseUrl)) { // 檢查 URL 是否包含基礎 URL
-                link.addEventListener('click', function (event) {
-                    event.preventDefault(); // 防止默認的點擊事件
-                    $(".main-right").load(link.href + " div.main-right", function (response, status, xhr) {
-                        if (status == "error") {
-                            $(".main-right").load("{{ site.url }}/404 div.main-right");
-                            
-                        }
+        function loadContentWithAJAX() {
+            let links = document.querySelectorAll('a');
+            links.forEach((link) => {
+                if (link.href.startsWith(baseUrl)) { // 檢查 URL 是否包含基礎 URL
+                    link.addEventListener('click', function (event) {
+                        event.preventDefault(); // 防止默認的點擊事件
+                        LoadContent(link.href);
                     });
-                });
-            }
-        });
+                }
+            });
+        }
+
+        function LoadContent(url) {
+            $(".main-right").load(url + " div.main-right", function (response, status, xhr) {
+                if (status == "error") {
+                    url = "{{ site.url }}/404";
+                    $(".main-right").load(url + " div.main-right");
+                }
+                loadContentWithAJAX();
+                history.pushState(null, '', url);
+            });
+        }
+
+        loadContentWithAJAX();
     </script>
 </body>
 

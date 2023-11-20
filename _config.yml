@@ -25,3 +25,9 @@ collections:
     name: :name
     layout: home
 
+defaults:
+  - scope:
+      path: ""
+      type: "blogs"
+    values:
+      layout: "home"

@@ -1,8 +1,8 @@
 ---
-title: Post Template
+title: Blog Template
 
 ---
 
-## Post Template
+## Blog Template
 
-This is a template for a post. It is not meant to be used as a post itself.
+This is a template for a Blog. It is not meant to be used as a Blog itself.
