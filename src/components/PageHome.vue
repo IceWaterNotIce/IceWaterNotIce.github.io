@@ -1,59 +1,43 @@
 <template>
-    <avatar-card></avatar-card>
-    <div>
-        <a-row :gutter="16">
-            <a-col :span="8">
-                <router-link to="/portfolio">
-                    <a-card hoverable>
-                        <template #cover>
-                            <img alt="Portfolio cover" src="../assets/images/portfolio_cover.jpeg" />
-                        </template>
-                        <a-card-meta title="Portfolio">
-                            <template #description>
-                                <p>projects, games, animations ...</p>
-                            </template>
-                        </a-card-meta>
-                    </a-card>
-                </router-link>
-            </a-col>
-            <a-col :span="8">
-                <router-link to="/notes">
-                    <a-card hoverable>
-                        <template #cover>
-                            <img alt="Notes cover" src="../assets/images/notes_cover.jpeg" />
-                        </template>
-                        <a-card-meta title="Notes">
-                            <template #description>
-                                <p>notes, thoughts, ideas ...</p>
-                            </template>
-                        </a-card-meta>
-                    </a-card>
-                </router-link>
-            </a-col>
-            <a-col :span="8">
-                <router-link to="/toolbox">
-                    <a-card hoverable>
-                        <template #cover>
-                            <img alt="Portfolio cover" src="../assets/images/toolbox_cover.jpeg" />
-                        </template>
-                        <a-card-meta title="Toolbox">
-                            <template #description>
-                                <p>tools, utilities, resources ...</p>
-                            </template>
-                        </a-card-meta>
-                    </a-card>
-                </router-link>
-            </a-col>
-        </a-row>
-    </div>
+    <a-layout>
+        <a-layout-sider>
+            <!-- 頭像-->
+            <!-- 頭像被按下時重定向到根目錄 -->
+            <router-link to="/">
+                <a-avatar :src="require('@/assets/images/my-logo.png')"
+                    style="margin: 1rem auto; display: block;"></a-avatar>
+            </router-link>
+            <!-- 名字 -->
+            <h1 style="color: #fff; text-align: center; margin-bottom: 2rem;">IceWaterNotIce</h1>
+            <!-- 選單 -->
+            <a-menu theme="dark" mode="inline" default-selected-keys="1">
+                <a-menu-item key="1">
+                    <span>CV</span>
+                </a-menu-item>
+                <a-menu-item key="2">
+                    <span>nav 2</span>
+                </a-menu-item>
+                <a-menu-item key="3">
+                    <span>nav 3</span>
+                </a-menu-item>
+            </a-menu>
+        </a-layout-sider>
+        <a-layout>
+            <a-layout-header>
+                <h1 style="color: #fff; text-align: center;">IceWaterNotIce</h1>
+                <a-input-search v-model:value="value" placeholder="input search text" style="width: 200px"
+                    @search="onSearch" />
+            </a-layout-header>
+            <a-layout-content>Content</a-layout-content>
+            <a-layout-footer>Footer</a-layout-footer>
+        </a-layout>
+    </a-layout>
 </template>
 
 <script>
-import avatarCard from '@/components/avatarCard.vue'
 export default {
     name: 'PageHome',
     components: {
-        "avatar-card": avatarCard
     },
     props: {
     },
