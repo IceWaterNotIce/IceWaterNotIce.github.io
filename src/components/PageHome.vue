@@ -1,4 +1,5 @@
 <template>
+    <avatar-card></avatar-card>
     <div>
         <a-row :gutter="16">
             <a-col :span="8">
@@ -48,9 +49,12 @@
 </template>
 
 <script>
-
+import avatarCard from '@/components/avatarCard.vue'
 export default {
     name: 'PageHome',
+    components: {
+        "avatar-card": avatarCard
+    },
     props: {
     },
     methods: {

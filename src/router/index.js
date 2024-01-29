@@ -5,7 +5,7 @@ import PageHome from '@/components/PageHome.vue'
 import PageNote from '@/components/PageNote.vue'
 
 import PageToolBox from '@/components/PageToolBox.vue'
-import AnswerTransfer from '@/components/tools/AnswerTransfer.vue'
+import AnswerTransfer from '@/components/toolbox/AnswerTransfer.vue'
 
 import PageTest from '@/components/PageTest.vue'
 
