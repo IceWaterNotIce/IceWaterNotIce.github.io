@@ -1,0 +1,242 @@
+[
+    [
+        {
+            "key": "`",
+            "subkey": "~"
+        },
+        {
+            "key": "1",
+            "subkey": "!"
+        },
+        {
+            "key": "2",
+            "subkey": "@"
+        },
+        {
+            "key": "3",
+            "subkey": "#"
+        },
+        {
+            "key": "4",
+            "subkey": "$"
+        },
+        {
+            "key": "5",
+            "subkey": "%"
+        },
+        {
+            "key": "6",
+            "subkey": "^"
+        },
+        {
+            "key": "7",
+            "subkey": "&"
+        },
+        {
+            "key": "8",
+            "subkey": "*"
+        },
+        {
+            "key": "9",
+            "subkey": "("
+        },
+        {
+            "key": "0",
+            "subkey": ")"
+        },
+        {
+            "key": "-",
+            "subkey": "_"
+        },
+        {
+            "key": "=",
+            "subkey": "+"
+        },
+        {
+            "key": "backspace"
+        }
+    ],
+    [
+        {
+            "key": "tab"
+        },
+        {
+            "key": "q",
+            "subkey": "Q"
+        },
+        {
+            "key": "w",
+            "subkey": "W"
+        },
+        {
+            "key": "e",
+            "subkey": "E"
+        },
+        {
+            "key": "r",
+            "subkey": "R"
+        },
+        {
+            "key": "t",
+            "subkey": "T"
+        },
+        {
+            "key": "y",
+            "subkey": "Y"
+        },
+        {
+            "key": "u",
+            "subkey": "U"
+        },
+        {
+            "key": "i",
+            "subkey": "I"
+        },
+        {
+            "key": "o",
+            "subkey": "O"
+        },
+        {
+            "key": "p",
+            "subkey": "P"
+        },
+        {
+            "key": "[",
+            "subkey": "{"
+        },
+        {
+            "key": "]",
+            "subkey": "}"
+        },
+        {
+            "key": "\\",
+            "subkey": "|"
+        }
+    ],
+    [
+        {
+            "key": "capslock"
+        },
+        {
+            "key": "a",
+            "subkey": "A"
+        },
+        {
+            "key": "s",
+            "subkey": "S"
+        },
+        {
+            "key": "d",
+            "subkey": "D"
+        },
+        {
+            "key": "f",
+            "subkey": "F"
+        },
+        {
+            "key": "g",
+            "subkey": "G"
+        },
+        {
+            "key": "h",
+            "subkey": "H"
+        },
+        {
+            "key": "j",
+            "subkey": "J"
+        },
+        {
+            "key": "k",
+            "subkey": "K"
+        },
+        {
+            "key": "l",
+            "subkey": "L"
+        },
+        {
+            "key": ";",
+            "subkey": ":"
+        },
+        {
+            "key": "'",
+            "subkey": "\""
+        },
+        {
+            "key": "enter"
+        }
+    ],
+    [
+        {
+            "key": "shift"
+        },
+        {
+            "key": "z",
+            "subkey": "Z"
+        },
+        {
+            "key": "x",
+            "subkey": "X"
+        },
+        {
+            "key": "c",
+            "subkey": "C"
+        },
+        {
+            "key": "v",
+            "subkey": "V"
+        },
+        {
+            "key": "b",
+            "subkey": "B"
+        },
+        {
+            "key": "n",
+            "subkey": "N"
+        },
+        {
+            "key": "m",
+            "subkey": "M"
+        },
+        {
+            "key": ",",
+            "subkey": "<"
+        },
+        {
+            "key": ".",
+            "subkey": ">"
+        },
+        {
+            "key": "/",
+            "subkey": "?"
+        },
+        {
+            "key": "shift"
+        }
+    ],
+    [
+        {
+            "key": "ctrl"
+        },
+        {
+            "key": "alt"
+        },
+        {
+            "key": "win"
+        },
+        {
+            "key": "space"
+        },
+        {
+            "key": "alt"
+        },
+        {
+            "key": "win"
+        },
+        {
+            "key": "menu"
+        },
+        {
+            "key": "ctrl"
+        }
+    ]
+]

@@ -28,16 +28,27 @@
                 <a-input-search v-model:value="value" placeholder="input search text" style="width: 200px"
                     @search="onSearch" />
             </a-layout-header>
-            <a-layout-content>Content</a-layout-content>
+            <a-layout-content>
+                <page-home-content></page-home-content>
+            </a-layout-content>
             <a-layout-footer>Footer</a-layout-footer>
         </a-layout>
     </a-layout>
+
+
+
+    <!-- 懸浮組件 -->
+    <outer-links></outer-links>
 </template>
 
 <script>
+import PageHomeContent from './PageHomeContent.vue';
+import outerLinks from './outerLinks.vue';
 export default {
     name: 'PageHome',
     components: {
+        "page-home-content": PageHomeContent,
+        "outer-links": outerLinks
     },
     props: {
     },
