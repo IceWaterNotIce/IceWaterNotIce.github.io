@@ -21,5 +21,6 @@ module.exports = defineConfig({
       .loader('markdown-loader')
       .end()
   },
-  outputDir: 'docs'
+  outputDir: 'docs',
+  publicPath: './'
 })
