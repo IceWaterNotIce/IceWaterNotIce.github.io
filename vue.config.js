@@ -22,5 +22,6 @@ module.exports = defineConfig({
       .end()
   },
   outputDir: 'docs',
-  publicPath: './'
+  // 設定 Vue CLI 專案的公共路徑（publicPath）
+  publicPath: '/',
 })

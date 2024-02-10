@@ -3,6 +3,7 @@
 <template>
     <div>
         <h1>PageTest</h1>
+        <p></p>
     </div>
 </template>
 

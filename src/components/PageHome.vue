@@ -1,4 +1,5 @@
 <template>
+    <alertModal></alertModal>
     <a-layout>
         <a-layout-sider>
             <!-- 頭像-->
@@ -43,10 +44,12 @@
 
 <script>
 import PageHomeContent from './PageHomeContent.vue';
+import AlertModal from './AlertModal.vue';
 import outerLinks from './outerLinks.vue';
 export default {
     name: 'PageHome',
     components: {
+        "alertModal": AlertModal,
         "page-home-content": PageHomeContent,
         "outer-links": outerLinks
     },
