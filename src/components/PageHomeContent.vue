@@ -15,7 +15,7 @@
             </router-link>
         </a-col>
         <a-col :span="8">
-            <router-link to="/notes">
+            <router-link to="/NoteList">
                 <a-card hoverable>
                     <template #cover>
                         <img alt="Notes cover" src="../assets/images/notes_cover.jpeg" />
@@ -34,7 +34,7 @@
                     <template #cover>
                         <img alt="Portfolio cover" src="../assets/images/toolbox_cover.jpeg" />
                     </template>
-                    <a-card-meta title="Toolbox">
+                    <a-card-meta title="toolbox">
                         <template #description>
                             <p>tools, utilities, resources ...</p>
                         </template>
@@ -56,5 +56,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

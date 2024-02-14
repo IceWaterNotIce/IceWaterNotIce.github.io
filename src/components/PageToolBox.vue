@@ -8,7 +8,7 @@
         <a-card-meta :title="tool.replace(/([A-Z])/g, ' $1').substring(1)">
             <template #description>
                 <!-- link to ./{{ tool }}-->
-                <router-link :to="'toolbox/'+tool">link</router-link>
+                <router-link :to="'toolbox/' + tool">link</router-link>
             </template>
         </a-card-meta>
     </a-card>
@@ -19,7 +19,7 @@ import { ref } from 'vue';
 import { onMounted } from 'vue';
 import { Card } from 'ant-design-vue';
 export default {
-    name: 'PageToolBox',
+    name: 'PagetoolBox',
     props: {
     },
     components: {

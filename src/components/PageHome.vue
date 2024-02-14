@@ -13,7 +13,9 @@
             <!-- 選單 -->
             <a-menu theme="dark" mode="inline" default-selected-keys="1">
                 <a-menu-item key="1">
-                    <span>CV</span>
+                    <router-link to="/CurriculumVitae">
+                        <span>CV</span>
+                    </router-link>
                 </a-menu-item>
                 <a-menu-item key="2">
                     <span>nav 2</span>
