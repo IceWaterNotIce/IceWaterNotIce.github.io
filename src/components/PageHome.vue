@@ -9,7 +9,7 @@
                     style="margin: 1rem auto; display: block;"></a-avatar>
             </router-link>
             <!-- 名字 -->
-            <h1 style="color: #fff; text-align: center; margin-bottom: 2rem;">IceWaterNotIce</h1>
+            <h1 style="color: #fff; text-align: center; margin-bottom: 2rem;">{{ $t('IceWaterNotIce') }}</h1>
             <!-- 選單 -->
             <a-menu theme="dark" mode="inline" default-selected-keys="1">
                 <a-menu-item key="1">
