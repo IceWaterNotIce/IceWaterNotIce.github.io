@@ -1,48 +1,13 @@
 <template>
-    <a-row :gutter="16">
-        <a-col :span="8">
-            <router-link to="/portfolio">
-                <a-card hoverable>
-                    <template #cover>
-                        <img alt="Portfolio cover" src="../assets/images/portfolio_cover.jpeg" />
-                    </template>
-                    <a-card-meta title="Portfolio">
-                        <template #description>
-                            <p>projects, games, animations ...</p>
-                        </template>
-                    </a-card-meta>
-                </a-card>
-            </router-link>
-        </a-col>
-        <a-col :span="8">
-            <router-link to="/NoteList">
-                <a-card hoverable>
-                    <template #cover>
-                        <img alt="Notes cover" src="../assets/images/notes_cover.jpeg" />
-                    </template>
-                    <a-card-meta title="Notes">
-                        <template #description>
-                            <p>notes, thoughts, ideas ...</p>
-                        </template>
-                    </a-card-meta>
-                </a-card>
-            </router-link>
-        </a-col>
-        <a-col :span="8">
-            <router-link to="/toolbox">
-                <a-card hoverable>
-                    <template #cover>
-                        <img alt="Portfolio cover" src="../assets/images/toolbox_cover.jpeg" />
-                    </template>
-                    <a-card-meta title="toolbox">
-                        <template #description>
-                            <p>tools, utilities, resources ...</p>
-                        </template>
-                    </a-card-meta>
-                </a-card>
-            </router-link>
-        </a-col>
-    </a-row>
+    <div class="content-content">
+
+        <div class="start-parallelogram parallelogram">
+        </div>
+        <div class="parallelogram">
+        </div>
+        <div class="end-parallelogram parallelogram">
+        </div>
+    </div>
 </template>
 
 <script>
@@ -56,4 +21,80 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+
+/* phone */
+@media screen and (max-width: 480px) {
+    .content-content {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+        background-color: rgb(21, 41, 41);
+        overflow: hidden;
+    }
+
+    .parallelogram {
+        background-color: rgb(133, 235, 235);
+        width: 100%;
+        height: 32%;
+        margin: 0;
+    }
+}
+
+/* ipad */
+@media screen and (min-width: 481px) and (max-width: 1024px){
+    .content-content {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        background-color: rgb(21, 41, 41);
+        overflow: hidden;
+    }
+
+    .parallelogram {
+        width: 100%;
+        height: 33%;
+    }
+}
+
+
+/* pc */
+@media screen and (min-width: 1025px) {
+    .content-content {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        background-color: rgb(21, 41, 41);
+        overflow: hidden;
+    }
+
+    .parallelogram {
+        width: 38%;
+        height: 100%;
+        clip-path: polygon(20% 0, 100% 0, 80% 100%, 0% 100%);
+        margin: 0 -10%;
+    }
+
+    .start-parallelogram.parallelogram {
+        clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
+        margin: 0;
+    }
+
+    .end-parallelogram.parallelogram {
+        clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+        margin: 0;
+    }
+
+}
+</style>

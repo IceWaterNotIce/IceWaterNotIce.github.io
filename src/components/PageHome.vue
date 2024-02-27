@@ -1,73 +1,102 @@
 <template>
-    <alertModal></alertModal>
-    <a-layout>
-        <a-layout-sider>
-            <!-- 頭像-->
-            <!-- 頭像被按下時重定向到根目錄 -->
-            <router-link to="/">
-                <a-avatar :src="require('@/assets/images/my-logo.png')"
-                    style="margin: 1rem auto; display: block;"></a-avatar>
-            </router-link>
-            <!-- 名字 -->
-            <h1 style="color: #fff; text-align: center; margin-bottom: 2rem;">{{ $t('IceWaterNotIce') }}</h1>
-            <!-- 選單 -->
-            <a-menu theme="dark" mode="inline" default-selected-keys="1">
-                <a-menu-item key="1">
-                    <router-link to="/CurriculumVitae">
-                        <span>CV</span>
-                    </router-link>
-                </a-menu-item>
-                <a-menu-item key="2">
-                    <span>nav 2</span>
-                </a-menu-item>
-                <a-menu-item key="3">
-                    <span>nav 3</span>
-                </a-menu-item>
-            </a-menu>
-        </a-layout-sider>
-        <a-layout>
-            <a-layout-header>
-                <h1 style="color: #fff; text-align: center;">IceWaterNotIce</h1>
-                <a-input-search v-model:value="value" placeholder="input search text" style="width: 200px"
-                    @search="onSearch" />
-            </a-layout-header>
-            <a-layout-content>
-                <page-home-content></page-home-content>
-            </a-layout-content>
-            <a-layout-footer>Footer</a-layout-footer>
-        </a-layout>
-    </a-layout>
-
-
-
-    <!-- 懸浮組件 -->
-    <outer-links></outer-links>
+    <alert-modal></alert-modal>
+    <div class="body">
+        <div class="sider">
+            <home-sider></home-sider>
+        </div>
+        <div class="content">
+            <home-content></home-content>
+        </div>
+    </div>
 </template>
 
 <script>
-import PageHomeContent from './PageHomeContent.vue';
-import AlertModal from './AlertModal.vue';
-import outerLinks from './outerLinks.vue';
+import AlertModal from "./AlertModal.vue";
+import HomeSider from "./PageHomeSider.vue";
+import HomeContent from "./PageHomeContent.vue";
 export default {
-    name: 'PageHome',
+    name: "PageHome",
     components: {
-        "alertModal": AlertModal,
-        "page-home-content": PageHomeContent,
-        "outer-links": outerLinks
+        "alert-modal": AlertModal,
+        "home-sider": HomeSider,
+        "home-content": HomeContent
     },
-    props: {
-    },
-    methods: {
-    },
-    mounted: function () {
-        this.$nextTick(function () {
-        })
-    }
 }
 </script>
 
-<style scoped>
-.ant-layout {
-    min-height: 100vh;
+<style scoped lang="scss">
+.body {
+    background-color: aquamarine;
 }
-</style>
+
+.sider {
+    background-color: antiquewhite;
+}
+
+.content {
+    background-color: rgb(21, 41, 41);
+}
+
+/* phone */
+@media screen and (max-width: 480px) {
+    .body {
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sider {
+        width: 100%;
+        min-height: 10%;
+        //delete this line
+        max-height: 12%;
+    }
+
+    .content {
+        width: 100%;
+        height: 90%;
+    }
+}
+
+/* ipad */
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+    .body {
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+    }
+
+    .sider {
+        width: 40%;
+        height: 100%;
+    }
+
+    .content {
+        width: 60%;
+        height: 100%;
+    }
+
+}
+
+/* desktop */
+@media screen and (min-width: 1025px) {
+    .body {
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+    }
+
+    .sider {
+        width: 30%;
+        height: 100%;
+    }
+
+    .content {
+        width: 70%;
+        height: 100%;
+    }
+}</style>
