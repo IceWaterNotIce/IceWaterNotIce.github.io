@@ -4,15 +4,18 @@
             <img src="../assets/images/my-logo.png" alt="logo" class="my-logo" />
         </router-link>
         <h1>Ice Water Not Ice</h1>
-        <a-menu mode="vertical">
+        <a-menu mode="vertical" class="sider-menu">
+            <a-menu-item key="0">
+                <router-link to="/about">About</router-link>
+            </a-menu-item>
             <a-menu-item key="1">
                 <router-link to="/portfolio">Portfolio</router-link>
-            </a-menu-item>
+            </a-menu-item>  
             <a-menu-item key="2">
                 <router-link to="/NoteList">Notes</router-link>
             </a-menu-item>
             <a-menu-item key="3">
-                <router-link to="/toolbox">Toolbox</router-link>
+                <router-link to="/tools">Tools</router-link>
             </a-menu-item>
         </a-menu>
     </div>
@@ -25,6 +28,13 @@ export default {
 </script>
 
 <style scoped lang="scss">
+
+.ant-menu.sider-menu {
+    background-color:transparent;
+    border-inline-end: none;
+}
+
+
 @media screen and (max-width: 480px) {
     .sider-content {
         width: 100%;

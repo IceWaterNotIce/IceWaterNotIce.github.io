@@ -1,5 +1,5 @@
 <template>
-    <alert-modal></alert-modal>
+    <!-- <alert-modal></alert-modal> -->
     <div class="body">
         <div class="sider">
             <home-sider></home-sider>
@@ -11,13 +11,13 @@
 </template>
 
 <script>
-import AlertModal from "./AlertModal.vue";
+// import AlertModal from "./AlertModal.vue";
 import HomeSider from "./PageHomeSider.vue";
 import HomeContent from "./PageHomeContent.vue";
 export default {
     name: "PageHome",
     components: {
-        "alert-modal": AlertModal,
+        // "alert-modal": AlertModal,
         "home-sider": HomeSider,
         "home-content": HomeContent
     },

@@ -8,7 +8,7 @@
         <a-card-meta :title="tool.replace(/([A-Z])/g, ' $1').substring(1)">
             <template #description>
                 <!-- link to ./{{ tool }}-->
-                <router-link :to="'toolbox/' + tool">link</router-link>
+                <router-link :to="'tools/' + tool">link</router-link>
             </template>
         </a-card-meta>
     </a-card>
@@ -19,7 +19,7 @@ import { ref } from 'vue';
 import { onMounted } from 'vue';
 import { Card } from 'ant-design-vue';
 export default {
-    name: 'PagetoolBox',
+    name: 'PageTools',
     props: {
     },
     components: {
@@ -28,7 +28,7 @@ export default {
     },
     setup() {
         const getToolList = () => {
-            let ToolList = require.context('@/components/toolbox/', true, /\.vue$/).keys();
+            let ToolList = require.context('@/components/tools/', true, /\.vue$/).keys();
             ToolList = ToolList.map((Tool) => {
                 Tool = Tool.replace(/(\.\/|\.vue)/g, '');
                 Tool = Tool.replace("./", "");

@@ -1,11 +1,31 @@
 <template>
     <div class="content-content">
-
         <div class="start-parallelogram parallelogram">
+            <img src="https://via.placeholder.com/500x700" alt="placeholder" />
+            <div>
+                <h1>Home</h1>
+                <p>
+                    fff
+                </p>
+            </div>
         </div>
         <div class="parallelogram">
+            <img src="https://via.placeholder.com/500x700" alt="placeholder" />
+            <div>
+                <h1>Home</h1>
+                <p>
+                    fff
+                </p>
+            </div>
         </div>
         <div class="end-parallelogram parallelogram">
+            <img src="https://via.placeholder.com/500x700" alt="placeholder" />
+            <div>
+                <h1>Home</h1>
+                <p>
+                    fff
+                </p>
+            </div>
         </div>
     </div>
 </template>
@@ -22,6 +42,30 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.start-parallelogram.parallelogram {
+    background-color: rgb(133, 235, 235);
+}
+
+.parallelogram {
+    background-color: rgb(49, 141, 141);
+}
+
+.end-parallelogram.parallelogram {
+    background-color: rgb(10, 89, 89);
+}
+
+.parallelogram {
+    display: flex;
+    flex-direction: column;
+}
+
+.parallelogram img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+}
+
 
 /* phone */
 @media screen and (max-width: 480px) {
@@ -32,13 +76,10 @@ export default {
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
-        text-align: center;
-        background-color: rgb(21, 41, 41);
         overflow: hidden;
     }
 
     .parallelogram {
-        background-color: rgb(133, 235, 235);
         width: 100%;
         height: 32%;
         margin: 0;
@@ -46,7 +87,7 @@ export default {
 }
 
 /* ipad */
-@media screen and (min-width: 481px) and (max-width: 1024px){
+@media screen and (min-width: 481px) and (max-width: 1024px) {
     .content-content {
         width: 100%;
         height: 100%;
@@ -54,8 +95,6 @@ export default {
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        text-align: center;
-        background-color: rgb(21, 41, 41);
         overflow: hidden;
     }
 
@@ -74,8 +113,6 @@ export default {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        text-align: center;
-        background-color: rgb(21, 41, 41);
         overflow: hidden;
     }
 

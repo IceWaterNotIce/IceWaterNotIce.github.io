@@ -1,3 +1,5 @@
+const path = require('path');
+
 const { defineConfig } = require('@vue/cli-service')
 module.exports = defineConfig({
   transpileDependencies: true,
@@ -19,6 +21,17 @@ module.exports = defineConfig({
       .end()
       .use('markdown-loader')
       .loader('markdown-loader')
+      .end()
+
+    config.module
+      .rule('.csv')
+      .test(/\.csv$/)
+      .include
+      .add(path.resolve(__dirname, 'src/assets/'))
+      .add(path.resolve(__dirname, 'src/assets/others/'))
+      .end()
+      .use('csv-loader')
+      .loader('csv-loader')
       .end()
   },
   outputDir: 'docs',

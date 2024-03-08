@@ -7,10 +7,11 @@ import PageCurriculumVitae from '@/components/PageCurriculumVitae.vue'
 import PageNote from '@/components/PageNote.vue'
 import PageNoteList from '@/components/PageNoteList.vue'
 
-import PagetoolBox from '@/components/PageToolbox.vue'
-import AnswerTransfer from '@/components/toolbox/AnswerTransfer.vue'
-import KeyboardKeyLocatorVue from '@/components/toolbox/KeyboardKeyLocator.vue'
-import TestToolVue from '@/components/toolbox/TestTool.vue'
+import PageTools from '@/components/PageTools.vue'
+import AnswerTransfer from '@/components/tools/AnswerTransfer.vue'
+import KeyboardKeyLocatorVue from '@/components/tools/KeyboardKeyLocator.vue'
+import KeyboardTraining from '@/components/tools/KeyboardTraining.vue'
+import TestToolVue from '@/components/tools/TestTool.vue'
 
 import PageTest from '@/components/PageTest.vue'
 
@@ -18,13 +19,14 @@ const routes = [
     { path: '/', component: PageHome },
     { path: '/CurriculumVitae', component: PageCurriculumVitae },
 
-    { path: '/Note/:file', component: PageNote},
+    { path: '/Note/:file', component: PageNote },
     { path: '/NoteList', component: PageNoteList },
 
-    { path: '/toolbox', component: PagetoolBox },
-    { path: '/toolbox/AnswerTransfer', component: AnswerTransfer },
-    { path: '/toolbox/KeyboardKeyLocator', component: KeyboardKeyLocatorVue },
-    { path: '/toolbox/TestTool', component: TestToolVue },
+    { path: '/tools', component: PageTools },
+    { path: '/tools/AnswerTransfer', component: AnswerTransfer },
+    { path: '/tools/KeyboardKeyLocator', component: KeyboardKeyLocatorVue },
+    { path: '/tools/KeyboardTraining', component: KeyboardTraining },
+    { path: '/tools/TestTool', component: TestToolVue },
 
     { path: '/test', component: PageTest },
 ]
