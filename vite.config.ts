@@ -21,7 +21,7 @@ export default defineConfig({
       },
 
       output: {
-        dir: '_dist',
+        dir: 'dist',
         // https://github.com/rollup/rollup/blob/master/src/utils/sanitizeFileName.ts
         sanitizeFileName(name) {
           const match = DRIVE_LETTER_REGEX.exec(name)
