@@ -1,0 +1,1 @@
+import{d as s,k as p,h as o,u as t,g as u,t as r}from"./runtime-dom.esm-bundler-Cj_GQYKS.js";const l=s({__name:"TestView",setup(m){const n=new Audio("..\\audios\\morale.mp3");return n.preload="none",(d,e)=>(u(),p("div",null,[o("button",{onClick:e[0]||(e[0]=a=>t(n).play())},"Play"),o("button",{onClick:e[1]||(e[1]=a=>t(n).pause())},"Pause")]))}}),i=r(l);i.mount("#app");
