@@ -2,21 +2,7 @@
 import { Layout } from 'ant-design-vue'
 import { Menu } from 'ant-design-vue'
 
-import { onMounted, ref } from 'vue'
-
-const models = ref<string[]>([])
-onMounted(() => {
-  // get data from /models/models_list.csv
-  fetch('public/models/models_preview_image_list.csv')
-    .then((response) => response.text())
-    .then((data) => {
-      console.log(data)
-      models.value = data.split('\n').map((item) => item.trim())
-    })
-    .catch((error) => {
-      console.error('There was an error!', error)
-    })
-})
+import CG_ModelingImagePreview from '@/components/CG_ModelingImagePreview.vue'
 </script>
 
 <template>
@@ -30,10 +16,7 @@ onMounted(() => {
         <Menu.Item key="3">Contact</Menu.Item>
       </Menu>
     </div>
-    <div class="aaa">
-      <div class="card" v-for="model in models" :key="model" :style="{ backgroundImage: `url('${model}')` }">
-      </div>
-    </div>
+    <CG_ModelingImagePreview />
   </Layout>
 </template>
 
@@ -53,6 +36,7 @@ body {
   transform: translateX(-50%);
   left: 50%;
   width: calc(412px + 40vw);
+  max-width: 100vw;
   @media (max-width: 412px) {
     width: 100vw;
   }
@@ -76,35 +60,5 @@ body {
   background: transparent;
   border-bottom: none;
   font-size: 1.2rem;
-}
-.aaa {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-}
-
-.card {
-  position: relative;
-  flex: 1 1 350px;
-  flex-shrink: 1;
-  aspect-ratio: 16/9;
-  max-width: 700px;
-  max-height: 40vh;
-  min-width: 350px;
-  background-size: cover;
-  background-color: aqua;
-  background-position: center;
-  background-repeat: no-repeat;
-  overflow: hidden;
-  cursor: pointer;
-  box-sizing: border-box;
-  padding: 0.3%;
-  margin: 0.1%;
-
-  a {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
 }
 </style>

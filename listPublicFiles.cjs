@@ -17,8 +17,10 @@ function getFilesRecursively(folderPath,FolderName, arrFileExt) {
         // check if the file path includes the folder name
         if (itemPath.includes(FolderName) && arrFileExt.includes(itemPath.split('.').pop())) {
           files.push({
-            name: item,
-            path: itemPath
+            // name of the file without the extension
+            name: item.split('.').slice(0, -1).join('.'),
+            // path after the public folder and "\\" replaced with "/
+            path: itemPath.split('public')[1].replace(/\\/g, '/')
           })
         }
       }
