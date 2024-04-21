@@ -30,9 +30,7 @@ onMounted(() => {
         <Menu.Item key="3">Contact</Menu.Item>
       </Menu>
     </div>
-
     <div class="aaa">
-      
       <div class="card" v-for="model in models" :key="model" :style="{ backgroundImage: `url('${model}')` }">
       </div>
     </div>
