@@ -2,7 +2,7 @@ import './assets/main.css'
 
 import { createApp } from 'vue'
 
-import TestView from './views/TestView.vue'
+import TestView from './TestView.vue'
 
 const app = createApp(TestView)
 

@@ -2,9 +2,6 @@
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
 
-//get all images from public folder
-const images = import.meta.globEager('../public/images/*.png')
-const imageKeys = Object.keys(images)
 </script>
 
 <template>

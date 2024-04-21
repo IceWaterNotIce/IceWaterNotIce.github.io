@@ -1,7 +1,7 @@
 import './assets/main.css'
 
 import { createApp } from 'vue'
-import KeybroadTrainingView from './views/KeybroadTrainingView.vue'
+import KeybroadTrainingView from './KeybroadTrainingView.vue'
 
 const app = createApp(KeybroadTrainingView)
 
