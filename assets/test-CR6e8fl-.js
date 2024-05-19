@@ -1,1 +1,0 @@
-import{d as s,k as p,l as o,u as t,j as u,y as r}from"./runtime-dom.esm-bundler-CH_-T8VN.js";const l=s({__name:"TestView",setup(m){const n=new Audio("..\\audios\\morale.mp3");return n.preload="none",(d,e)=>(u(),p("div",null,[o("button",{onClick:e[0]||(e[0]=a=>t(n).play())},"Play"),o("button",{onClick:e[1]||(e[1]=a=>t(n).pause())},"Pause")]))}}),i=r(l);i.mount("#app");
