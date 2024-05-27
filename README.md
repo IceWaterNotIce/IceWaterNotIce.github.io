@@ -37,3 +37,37 @@ npm run build
 ```sh
 npm run lint
 ```
+
+### Add a New Page to the Site
+
+Step 1: Create a html file in root directory of the project. For example, `[[your page name]].html`.
+
+```html
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/icewaternotice.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>[[The website title]]</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/[[your page name]].ts"></script>
+  </body>
+</html>
+```
+
+Step 2: In 'vite.config.ts', add the following code to the 'pages' array.
+
+```ts
+export default defineConfig({
+  build: {
+    rollupOptions: {
+      input: {
+        [[your page name]]: path.resolve(__dirname, './[[your page name]].html'),
+        },
+    },
+},
+})
+```
