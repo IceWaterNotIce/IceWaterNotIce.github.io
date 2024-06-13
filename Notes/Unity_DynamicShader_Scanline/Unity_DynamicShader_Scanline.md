@@ -46,3 +46,7 @@ now you can see the scanline effect on the model.
 ![alt text](image-9.png)
 now you can see the scanline effect on the model.
 ![alt text](gif-1.gif)
+
+## materials
+
+1. [Unity Package](Scanline.unitypackage)
