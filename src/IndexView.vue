@@ -18,6 +18,13 @@ import CG_ModelingImagePreview from '@/components/CG_ModelingImagePreview.vue'
     </div>
     <CG_ModelingImagePreview />
   </Layout>
+  <footer>
+    <p>© 2021 ICEWATERNOTICE</p>
+    <p>
+      Contact:
+      <a href="mailto:icewaternotice@gmail.com"> icewaternotice@gmail.com </a>
+    </p>
+  </footer>
 </template>
 
 <style lang="scss">
