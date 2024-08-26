@@ -7,11 +7,14 @@
 ## Steps
 
 1. Create a new Unity project with Universal 3D.
+創建一個新的Unity項目，選擇Universal 3D。
 ![alt text](image-4.png)
 1. In Project assets Folder, Right click "Create > Shader Graph > BuiltIn > Lit Shader Graph" and name as "Scanline".
+在 Project assets 文件夾中，右鍵單擊“Create > Shader Graph > BuiltIn > Lit Shader Graph”並命名為“Scanline”。
 ![alt text](image.png)
 ![alt text](image-1.png)
 1. Create or import a model to scene, and assign the material to it.
+創建或導入一個模型到場景中，並將材質分配給它。
 ![alt text](image-6.png)
 1. Open the "Scanline" shader graph editor.
 ![alt text](image-7.png)
