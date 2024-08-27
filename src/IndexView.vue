@@ -2,6 +2,7 @@
 import { Layout } from 'ant-design-vue'
 import { Menu } from 'ant-design-vue'
 
+import outsideLink from '@/components/outsideLink.vue'
 </script>
 
 <template>
@@ -23,6 +24,8 @@ import { Menu } from 'ant-design-vue'
       <a href="mailto:icewaternotice@gmail.com"> icewaternotice@gmail.com </a>
     </p>
   </footer>
+
+  <outsideLink />
 </template>
 
 <style lang="scss">
@@ -44,5 +47,6 @@ footer {
   text-align: center;
   padding: 10px 0;
 }
-</style>
 
+
+</style>
