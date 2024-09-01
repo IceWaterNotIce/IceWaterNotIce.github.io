@@ -2,7 +2,7 @@
 
 import { Menu } from 'ant-design-vue'
 
-import outsideLinks from '@/components/outside-links.vue'
+import outsideLinks from '@/components/outsideLinks.vue'
 import animatedCirclesBackground from '@/components/animated-circles-background.vue'
 
 import ThemeSwitch from '@/components/themeSwitch.vue'
@@ -45,9 +45,6 @@ body.dark {
 }
 
 
-h1 {
- 
-}
 .dark h1 {
   color: white;
 }
