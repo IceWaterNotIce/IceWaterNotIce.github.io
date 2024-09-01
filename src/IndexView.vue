@@ -4,17 +4,23 @@ import { Menu } from 'ant-design-vue'
 
 import outsideLink from '@/components/outsideLink.vue'
 import animatedCirclesBackground from '@/components/animated-circles-background.vue'
+
+import ThemeSwitch from '@/components/themeSwitch.vue'
+const ThemeSwitchChange = (isSwitchOn: boolean) => {
+  document.body.classList.toggle('dark', isSwitchOn)
+}
 </script>
 
 <template>
   <Layout>
     <h1>ICEWATERNOTICE</h1>
     <div class="nav">
-      <Menu theme="dark" mode="horizontal">
+      <Menu mode="horizontal">
         <Menu.Item key="1">Home</Menu.Item>
         <Menu.Item key="2">About</Menu.Item>
         <Menu.Item key="3">Contact</Menu.Item>
       </Menu>
+      <themeSwitch @switchChange="ThemeSwitchChange" />
     </div>
   </Layout>
 
@@ -40,6 +46,10 @@ body {
   }
 }
 
+.dark h1 {
+  color: white;
+}
+
 footer {
   position: fixed;
   bottom: 0;
@@ -48,5 +58,9 @@ footer {
   color: white;
   text-align: center;
   padding: 10px 0;
+}
+.dark footer{
+  background-color: #333;
+  color: white;
 }
 </style>
