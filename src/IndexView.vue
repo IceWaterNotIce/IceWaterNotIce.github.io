@@ -12,17 +12,15 @@ const ThemeSwitchChange = (isSwitchOn: boolean) => {
 </script>
 
 <template>
-  <Layout>
-    <h1>ICEWATERNOTICE</h1>
-    <div class="nav">
-      <Menu mode="horizontal">
-        <Menu.Item key="1">Home</Menu.Item>
-        <Menu.Item key="2">About</Menu.Item>
-        <Menu.Item key="3">Contact</Menu.Item>
-      </Menu>
-      <themeSwitch @switchChange="ThemeSwitchChange" />
-    </div>
-  </Layout>
+  <h1>ICEWATERNOTICE</h1>
+  <div class="nav">
+    <Menu mode="horizontal">
+      <Menu.Item key="1">Home</Menu.Item>
+      <Menu.Item key="2">About</Menu.Item>
+      <Menu.Item key="3">Contact</Menu.Item>
+    </Menu>
+    <themeSwitch @switchChange="ThemeSwitchChange" />
+  </div>
 
   <footer>
     <animatedCirclesBackground />
@@ -38,14 +36,17 @@ const ThemeSwitchChange = (isSwitchOn: boolean) => {
 
 <style lang="scss">
 body {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url('/images/night.png');
-  &.night {
-    background-image: url('/images/night.png');
-  }
+ background-color: #f0f0f0;
 }
 
+body.dark {
+  background-color: #333;
+}
+
+
+h1 {
+ 
+}
 .dark h1 {
   color: white;
 }
@@ -59,7 +60,7 @@ footer {
   text-align: center;
   padding: 10px 0;
 }
-.dark footer{
+.dark footer {
   background-color: #333;
   color: white;
 }
