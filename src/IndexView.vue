@@ -2,7 +2,7 @@
 import { Layout } from 'ant-design-vue'
 import { Menu } from 'ant-design-vue'
 
-import outsideLink from '@/components/outsideLink.vue'
+import outsideLinks from '@/components/outsideLinks.vue'
 import animatedCirclesBackground from '@/components/animated-circles-background.vue'
 
 import ThemeSwitch from '@/components/themeSwitch.vue'
@@ -12,6 +12,7 @@ const ThemeSwitchChange = (isSwitchOn: boolean) => {
 </script>
 
 <template>
+  <animatedCirclesBackground />
   <h1>ICEWATERNOTICE</h1>
   <div class="nav">
     <Menu mode="horizontal">
@@ -23,20 +24,20 @@ const ThemeSwitchChange = (isSwitchOn: boolean) => {
   </div>
 
   <footer>
-    <animatedCirclesBackground />
-    <p>© 2021 ICEWATERNOTICE</p>
     <p>
       Contact:
       <a href="mailto:icewaternotice@gmail.com"> icewaternotice@gmail.com </a>
     </p>
   </footer>
 
-  <outsideLink />
+  <!-- icons which connect to other websites -->
+  <outsideLinks />
 </template>
 
 <style lang="scss">
 body {
  background-color: #f0f0f0;
+ 
 }
 
 body.dark {
