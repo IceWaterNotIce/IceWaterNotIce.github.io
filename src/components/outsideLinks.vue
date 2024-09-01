@@ -1,5 +1,5 @@
 <template>
-  <div class="outsideLink">
+  <div class="outsideLinks">
     <!-- Link to bilibili-->
     <div class="icon">
       <a href="https://space.bilibili.com/3494373465524892?spm_id_from=333.1007.0.0">
@@ -24,7 +24,7 @@
 <script setup lang="ts"></script>
 
 <style lang="scss">
-.outsideLink {
+.outsideLinks{
   // locate it at the bottom left corner of the page
   position: absolute;
   left: 0;

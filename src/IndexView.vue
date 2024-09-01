@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { Layout } from 'ant-design-vue'
+
 import { Menu } from 'ant-design-vue'
 
-import outsideLinks from '@/components/outsideLinks.vue'
+import outsideLinks from '@/components/outside-links.vue'
 import animatedCirclesBackground from '@/components/animated-circles-background.vue'
 
 import ThemeSwitch from '@/components/themeSwitch.vue'
