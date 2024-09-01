@@ -3,6 +3,7 @@ import { Layout } from 'ant-design-vue'
 import { Menu } from 'ant-design-vue'
 
 import outsideLink from '@/components/outsideLink.vue'
+import animatedCirclesBackground from '@/components/animated-circles-background.vue'
 </script>
 
 <template>
@@ -18,6 +19,7 @@ import outsideLink from '@/components/outsideLink.vue'
   </Layout>
 
   <footer>
+    <animatedCirclesBackground />
     <p>© 2021 ICEWATERNOTICE</p>
     <p>
       Contact:
@@ -47,6 +49,4 @@ footer {
   text-align: center;
   padding: 10px 0;
 }
-
-
 </style>
