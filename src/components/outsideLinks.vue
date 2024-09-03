@@ -2,7 +2,7 @@
   <div class="outsideLinks">
     <!-- Link to bilibili-->
     <div class="icon">
-      <a href="https://space.bilibili.com/3494373465524892?spm_id_from=333.1007.0.0">
+      <a href="https://space.bilibili.com/3494373465524892">
         <img src="\images\bilibili-brands-solid.svg" alt="bilibili"/>
       </a>
     </div>
