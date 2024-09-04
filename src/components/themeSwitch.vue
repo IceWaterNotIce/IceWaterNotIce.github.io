@@ -1,11 +1,15 @@
 <template>
-  <div>
-    <label for="darkModeSwitch">Dark Mode:</label>
-    <input id="darkModeSwitch" type="checkbox" v-model="isSwitchOn" @change="emitSwitchChange" />
-  </div>
+  Theme
+  <Switch
+    v-model:checked="isSwitchOn"
+    @change="emitSwitchChange"
+    :checked-children="'dark-mode'"
+    :un-checked-children="'light-mode'"
+  />
 </template>
 
 <script setup lang="ts">
+import { Switch } from 'ant-design-vue'
 import { defineEmits, ref } from 'vue'
 // #region Dark mode switch
 const emit = defineEmits(['switchChange'])

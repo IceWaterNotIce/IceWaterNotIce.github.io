@@ -12,6 +12,16 @@
   height: 100%;
   left: 0;
   top: 0;
+
+  --circle-color: rgba(29, 28, 28, 0.5);
+  --line-color: rgba(29, 28, 28, 0.5);
+  --background-color: #f0f0f0;
+}
+
+.dark #animated-circles-background {
+  --circle-color: rgba(255, 255, 255, 0.5);
+  --line-color: rgba(255, 255, 255, 0.5);
+  --background-color: #333;
 }
 </style>
 
@@ -19,14 +29,16 @@
 import { onMounted } from 'vue'
 
 onMounted(() => {
-  // Get the canvas element
+  // get the canvas and its context
   var canvas = document.getElementById('animated-circles-background') as HTMLCanvasElement
   var ctx = canvas.getContext('2d')
 
-  // get parent element's width and height
+  // make the canvas full of the parent element
   var parent = canvas.parentElement
   canvas.width = parent ? parent.clientWidth : 0
   canvas.height = parent ? parent.clientHeight : 0
+
+  // resize the canvas when the window is resized ( not immediately )
   let resizeTimeout: number | null = null
   window.addEventListener('resize', function () {
     if (resizeTimeout) {
@@ -38,14 +50,13 @@ onMounted(() => {
     }, 50)
   })
 
-  // 50 random circles
+  // create circles
   var circles: {
     x: number
     y: number
     speed: number
     direction: number
     radius: number
-    color: string
   }[] = []
   for (var i = 0; i < 100; i++) {
     circles.push({
@@ -53,9 +64,24 @@ onMounted(() => {
       y: Math.random() * canvas.height,
       speed: Math.random() + 0.1,
       direction: Math.random() * Math.PI * 2,
-      radius: 2,
-      color: 'rgba(255, 255, 255, 0.5)'
+      radius: 2, 
     })
+  }
+
+  // clear the canvas
+  function clear() {
+    if (ctx) {
+      ctx.clearRect(0, 0, canvas.width, canvas.height)
+    }
+  }
+
+  //#region draw functions
+  // draw the background
+  function drawBackground() {
+    if (ctx) {
+      ctx.fillStyle = getComputedStyle(canvas).getPropertyValue('--background-color').trim()
+      ctx.fillRect(0, 0, canvas.width, canvas.height)
+    }
   }
 
   // draw the circle
@@ -65,7 +91,7 @@ onMounted(() => {
       if (ctx) {
         ctx.beginPath()
         ctx.arc(circle.x, circle.y, circle.radius, 0, Math.PI * 2)
-        ctx.fillStyle = circle.color
+        ctx.fillStyle = getComputedStyle(canvas).getPropertyValue('--circle-color').trim()
         ctx.fill()
       }
     }
@@ -78,17 +104,51 @@ onMounted(() => {
     mouse.x = e.clientX - canvas.getBoundingClientRect().left
     mouse.y = e.clientY - canvas.getBoundingClientRect().top
   })
+
+  // draw line between two points
+  function drawLine() {
+    for (var i = 0; i < circles.length; i++) {
+      for (var j = i + 1; j < circles.length; j++) {
+        var circle1 = circles[i]
+        var circle2 = circles[j]
+        var dx = circle1.x - circle2.x
+        var dy = circle1.y - circle2.y
+        var distance = Math.sqrt(dx * dx + dy * dy)
+        if (distance < 100) {
+          if (ctx) {
+            ctx.beginPath()
+            ctx.moveTo(circle1.x, circle1.y)
+            ctx.lineTo(circle2.x, circle2.y)
+            ctx.strokeStyle =
+              getComputedStyle(canvas).getPropertyValue('--line-color').trim() +
+              (1 - distance / 100) +
+              ')'
+            ctx.stroke()
+          }
+        }
+      }
+    }
+  }
+  //#endregion
+
+  // update the circle's position
   function update() {
     for (var i = 0; i < circles.length; i++) {
       var circle = circles[i]
       circle.x += Math.cos(circle.direction) * circle.speed
       circle.y += Math.sin(circle.direction) * circle.speed
 
-      // if cirle near the mouse, 
+      // if cirle near the mouse,
       var dx = circle.x - mouse.x
       var dy = circle.y - mouse.y
       var distance = Math.sqrt(dx * dx + dy * dy)
-      if (distance < 100 && circle.x > 0 && circle.x < canvas.width && circle.y > 0 && circle.y < canvas.height) {
+      if (
+        distance < 100 &&
+        circle.x > 0 &&
+        circle.x < canvas.width &&
+        circle.y > 0 &&
+        circle.y < canvas.height
+      ) {
         if (circle.x < mouse.x) {
           circle.x -= 1
         } else {
@@ -113,41 +173,13 @@ onMounted(() => {
     }
   }
 
-  // draw line between two points
-  function drawLine() {
-    for (var i = 0; i < circles.length; i++) {
-      for (var j = i + 1; j < circles.length; j++) {
-        var circle1 = circles[i]
-        var circle2 = circles[j]
-        var dx = circle1.x - circle2.x
-        var dy = circle1.y - circle2.y
-        var distance = Math.sqrt(dx * dx + dy * dy)
-        if (distance < 100) {
-          if (ctx) {
-            ctx.beginPath()
-            ctx.moveTo(circle1.x, circle1.y)
-            ctx.lineTo(circle2.x, circle2.y)
-            ctx.strokeStyle = 'rgba(255, 255, 255, ' + (1 - distance / 100) + ')'
-            ctx.stroke()
-          }
-        }
-      }
-    }
-  }
-
-  // clear the canvas
-  function clear() {
-    if (ctx) {
-      ctx.clearRect(0, 0, canvas.width, canvas.height)
-    }
-  }
-
   // draw the circle
   function draw() {
     clear()
+    drawBackground()
     drawCircle()
-    update()
     drawLine()
+    update()
   }
 
   // call the draw function every 10ms

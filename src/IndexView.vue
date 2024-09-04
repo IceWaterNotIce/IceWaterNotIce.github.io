@@ -1,14 +1,18 @@
 <script setup lang="ts">
-
-import { Menu } from 'ant-design-vue'
+import { Menu, SubMenu } from 'ant-design-vue'
 
 import outsideLinks from '@/components/outsideLinks.vue'
 import animatedCirclesBackground from '@/components/animated-circles-background.vue'
 
 import ThemeSwitch from '@/components/themeSwitch.vue'
+
 const ThemeSwitchChange = (isSwitchOn: boolean) => {
   document.body.classList.toggle('dark', isSwitchOn)
 }
+if (localStorage.getItem('darkMode') === 'dark') {
+  ThemeSwitchChange(true)
+}
+
 </script>
 
 <template>
@@ -19,8 +23,14 @@ const ThemeSwitchChange = (isSwitchOn: boolean) => {
       <Menu.Item key="1">Home</Menu.Item>
       <Menu.Item key="2">About</Menu.Item>
       <Menu.Item key="3">Contact</Menu.Item>
+      <!-- Setting Menu -->
+      <SubMenu key="4" title="Setting">
+        <!-- Theme Switch -->
+        <Menu.Item key="4-1">
+          <ThemeSwitch @switchChange="ThemeSwitchChange" />
+        </Menu.Item>
+      </SubMenu>
     </Menu>
-    <themeSwitch @switchChange="ThemeSwitchChange" />
   </div>
 
   <footer>
@@ -36,14 +46,12 @@ const ThemeSwitchChange = (isSwitchOn: boolean) => {
 
 <style lang="scss">
 body {
- background-color: #f0f0f0;
- 
+  background-color: #f0f0f0;
 }
 
 body.dark {
   background-color: #333;
 }
-
 
 .dark h1 {
   color: white;
