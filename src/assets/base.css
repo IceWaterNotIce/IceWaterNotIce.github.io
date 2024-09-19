@@ -1,19 +1,12 @@
 html{
-  margin: 0%;
-  padding: 0%;
-  min-width: 100%;
-  min-height: 100%;
+  margin: 0;
+  padding: 0;
 }
 body{
-  margin: 0%;
-  padding: 0%;
-  min-width: 100%;
-  min-height: 100%;
+  margin: 0;
+  padding: 0;
   height: 90vh;
 }
-#app {
-  margin: 0%;
-  padding: 0%;
-  min-width: 100%;
-  min-height: 100%;
+#app{
+  height: 100%;
 }

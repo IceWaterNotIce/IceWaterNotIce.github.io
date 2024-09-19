@@ -18,6 +18,7 @@ export default defineConfig({
         index: path.resolve(__dirname, './index.html'),
         test: path.resolve(__dirname, './test.html'),
         keyboardTraining: path.resolve(__dirname, './keyboardTraining.html'),
+        404: path.resolve(__dirname, './404.html')
       },
 
       output: {
