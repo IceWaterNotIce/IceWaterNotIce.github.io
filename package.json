@@ -21,7 +21,8 @@
     "fs": "^0.0.1-security",
     "path": "^0.12.7",
     "three": "^0.163.0",
-    "vue": "^3.4.21"
+    "vue": "^3.4.21",
+    "vue-router": "^4.4.5"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.3.3",
@@ -36,11 +37,14 @@
     "ant-design-vue": "^4.1.2",
     "eslint": "^8.49.0",
     "eslint-plugin-vue": "^9.17.0",
+    "install": "^0.13.0",
+    "npm": "^10.8.3",
     "npm-run-all2": "^6.1.2",
     "prettier": "^3.0.3",
     "sass": "^1.75.0",
     "typescript": "~5.4.0",
     "vite": "^5.1.6",
+    "vite-plugin-pages": "^0.32.3",
     "vue-tsc": "^2.0.6"
   }
 }
