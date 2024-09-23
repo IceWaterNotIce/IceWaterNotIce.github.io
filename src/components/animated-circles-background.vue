@@ -36,6 +36,18 @@ onMounted(() => {
   canvas.width = parent ? parent.clientWidth : 0
   canvas.height = parent ? parent.clientHeight : 0
 
+  // create circles
+  const circleDensity = 0.00005 // Adjust this value as needed
+  var initialCircleCount = Math.floor(canvas.width * canvas.height * circleDensity)
+  var circles: {
+    x: number
+    y: number
+    speed: number
+    direction: number
+    radius: number
+  }[] = []
+  createCircles()
+
   // resize the canvas when the window is resized ( not immediately )
   let resizeTimeout: number | null = null
   window.addEventListener('resize', function () {
@@ -45,25 +57,29 @@ onMounted(() => {
     resizeTimeout = setTimeout(function () {
       canvas.width = parent ? parent.clientWidth : 0
       canvas.height = parent ? parent.clientHeight : 0
+      initialCircleCount = Math.floor(canvas.width * canvas.height * circleDensity)
+      createCircles()
     }, 50)
   })
 
-  // create circles
-  var circles: {
-    x: number
-    y: number
-    speed: number
-    direction: number
-    radius: number
-  }[] = []
-  for (var i = 0; i < 100; i++) {
-    circles.push({
-      x: Math.random() * canvas.width,
-      y: Math.random() * canvas.height,
-      speed: Math.random() + 0.1,
-      direction: Math.random() * Math.PI * 2,
-      radius: 2, 
-    })
+  function createCircles() {
+    if (circles.length < initialCircleCount) {
+      for (var i = 0; i < initialCircleCount - circles.length; i++) {
+        circles.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          speed: Math.random() + 0.1,
+          direction: Math.random() * Math.PI * 2,
+          radius: 2
+        })
+      }
+    }
+    if (circles.length > initialCircleCount) {
+      circles.pop()
+    }
+    if (circles.length === initialCircleCount) {
+      return
+    }
   }
 
   // clear the canvas
