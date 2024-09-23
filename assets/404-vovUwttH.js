@@ -1,1 +1,0 @@
-import{d as n,c as o,a,F as s,b as e,o as t,e as c}from"./runtime-dom.esm-bundler-BruH4S5N.js";import{_ as p,o as r}from"./animated-circles-background.vuevuetypestyleindex0lang-BbscYDyX.js";const _=e("div",{class:"content"},[e("h1",null,"404"),e("p",null,"Page not found")],-1),m=n({__name:"404View",setup(l){return(u,d)=>(t(),o(s,null,[_,a(p),a(r)],64))}}),i=c(m);i.mount("#app");
