@@ -1,14 +1,47 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" href="/icewaternotice.ico" />
+    <link rel="icon" href="assets/icewaternotice.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
     <title>Ice Water Not Ice</title>
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/light.css" />
+    <link rel="stylesheet" href="styles/dark.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/index.ts"></script>
+    <!-- background -->
+    <animated-circles-background></animated-circles-background>
+    <script
+      src="components/animated-circles-background.js"
+      type="module"
+    ></script>
+
+    <!-- header -->
+    <header>
+      <h1>Ice Water Not Ice</h1>
+      <navigation-menu></navigation-menu>
+      <script src="components/navigationMenu.js" type="module"></script>
+    </header>
+
+    <!-- main content -->
+    <main>
+      <h2>Welcome to Ice Water Not Ice</h2>
+      <p>
+        This is a website dedicated to the idea that ice water is not ice. Ice
+        water is a liquid, not a solid. Ice is a solid. Ice water is a mixture
+        of ice and water. Ice water is not ice. Ice water is ice water.
+      </p>
+    </main>
+
+    <!-- footer -->
+    <footer>
+      <p>&copy; 2021 Ice Water Not Ice</p>
+    </footer>
+
+    <!-- outside links -->
+    <outside-links></outside-links>
+    <script src="components/outsideLinks.js" type="module"></script>
   </body>
 </html>

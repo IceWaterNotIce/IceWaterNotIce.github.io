@@ -1,0 +1,13 @@
+body.dark {
+  /* General */
+  color: rgba(200, 200, 200, 0.9);
+
+  /* Animated Circle Background */
+  --circle-color: rgba(255, 255, 255, 0.5);
+  --line-color: rgba(255, 255, 255, 0.5);
+  --canvas-background-color: #333;
+
+  /* Navigation Menu */
+  --nav-background-color: #222;
+  --nav-text-color: #fff;
+}

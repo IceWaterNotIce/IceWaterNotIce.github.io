@@ -1,14 +1,48 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" href="/icewaternotice.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
-    <title>Ice Water Not Ice</title>
+    <title>404</title>
+    <link rel="stylesheet" href="styles/base.css" />
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/404.ts"></script>
+    <!-- background -->
+    <animated-circles-background></animated-circles-background>
+    <script
+      src="components/animated-circles-background.js"
+      type="module"
+    ></script>
+
+    <!-- header -->
+    <header>
+      <h1>404</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- main content -->
+    <main>
+      <h2>Page Not Found</h2>
+      <p>
+        The page you are looking for does not exist. Please check the URL and try
+        again.
+      </p>
+    </main>
+
+    <!-- footer -->
+    <footer>
+      <p>&copy; 2021 Ice Water Not Ice</p>
+    </footer>
+
+    <!-- outside links -->
+    <outside-links></outside-links>
+    <script src="components/outsideLinks.js" type="module"></script>
   </body>
 </html>

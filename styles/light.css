@@ -1,0 +1,10 @@
+:root {
+  /* Animated Circle Background */
+  --circle-color: rgba(29, 28, 28, 0.5);
+  --line-color: rgba(29, 28, 28, 0.5);
+  --canvas-background-color: #f0f0f0;
+
+  /* Navigation Menu */
+  --nav-background-color: rgba(200, 200, 200, 0.9);
+  --nav-text-color: rgba(30, 30, 30, 0.9);
+}
